@@ -2,9 +2,13 @@
 
 namespace Bleatingsheep.Osu
 {
+    /// <summary>
+    /// The mods used in osu! games.
+    /// </summary>
     [Flags]
     public enum Mods
     {
+#pragma warning disable CS1591
         None = 0,
         NoFail = 1,
         Easy = 2,
@@ -37,5 +41,6 @@ namespace Bleatingsheep.Osu
         Key3 = 134217728,
         Key2 = 268435456,
         ScoreV2 = 536870912,
+#pragma warning restore CS1591
     }
 }

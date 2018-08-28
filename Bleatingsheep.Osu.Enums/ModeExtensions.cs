@@ -69,7 +69,7 @@ namespace Bleatingsheep.Osu
                     return "osu!";
                 case Mode.Taiko:
                     return "taiko";
-                case Mode.Ctb:
+                case Mode.Catch:
                     return "catch";
                 case Mode.Mania:
                     return "mania";
