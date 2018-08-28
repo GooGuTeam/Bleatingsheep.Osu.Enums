@@ -9,6 +9,8 @@ namespace Bleatingsheep.Osu
     /// </summary>
     public static class ModsExtensions
     {
+        private const string FormatExceptionMessage = "Mods format is invalid.";
+
         private static readonly IReadOnlyDictionary<string, Mods> pairs = new Dictionary<string, Mods>
         {
             //{ "NONE", Mods.None },
@@ -31,10 +33,11 @@ namespace Bleatingsheep.Osu
             { Mods.Perfect, Mods.SuddenDeath },
         };
 
+        /// <exception cref="FormatException"></exception>
         private static IEnumerable<string> Split(string modString)
         {
             if (modString.Length % 2 != 0)
-                throw new ArgumentException("String argument is invalid.", nameof(modString));
+                throw new FormatException(FormatExceptionMessage);
             for (int i = 0; i < modString.Length; i += 2)
             {
                 yield return modString.Substring(i, 2);
@@ -67,7 +70,7 @@ namespace Bleatingsheep.Osu
             foreach (string mod in Split(modString))
             {
                 if (!pairs.TryGetValue(mod, out Mods current))
-                    throw new FormatException("String argument is invalid.");
+                    throw new FormatException(FormatExceptionMessage);
 
                 //current |= require.GetValueOrDefault(current);
                 if (require.TryGetValue(current, out Mods required))

@@ -12,7 +12,7 @@ namespace Bleatingsheep.Osu
     {
         private const string ModeInfo = @"0,std,osu,osu!,standard,osu!standard,戳泡泡
 1,taiko,osu!taiko,太鼓
-2,ctb,catch,osu!catch,接水果模式
+2,ctb,catch,osu!catch,接水果
 3,mania,osu!mania";
 
         private static readonly IReadOnlyDictionary<string, Mode> pairs;
@@ -21,7 +21,7 @@ namespace Bleatingsheep.Osu
         {
             void ConcatLine(string line, Mode mode, ref IEnumerable<KeyValuePair<string, Mode>> toAdd)
             {
-                var alias = line.Split(',').Select(s => new KeyValuePair<string, Mode>(s, mode));
+                var alias = line.Split(',').Select(s => new KeyValuePair<string, Mode>(s.ToUpperInvariant(), mode));
                 toAdd = toAdd.Concat(alias);
             }
 
