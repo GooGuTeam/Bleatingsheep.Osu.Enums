@@ -8,6 +8,8 @@
     <PackageTags>osu</PackageTags>
     <PackageLicenseUrl>https://github.com/bltsheep/Bleatingsheep.Osu.Enums/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bltsheep/Bleatingsheep.Osu.Enums</PackageProjectUrl>
+    <Copyright>bleatingsheep</Copyright>
+    <Description>Mode and Mods enum for osu! libs.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
