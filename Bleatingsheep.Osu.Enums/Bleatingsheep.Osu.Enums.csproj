@@ -3,17 +3,18 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45;netcoreapp1.0;netstandard1.0</TargetFrameworks>
     <RootNamespace>Bleatingsheep.Osu</RootNamespace>
-    <Version>0.2.0</Version>
+    <Version>0.6.0-beta2</Version>
     <Authors>bleatingsheep</Authors>
     <PackageTags>osu</PackageTags>
-    <PackageLicenseUrl>https://github.com/bltsheep/Bleatingsheep.Osu.Enums/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/bltsheep/Bleatingsheep.Osu.Enums</PackageProjectUrl>
     <Copyright>bleatingsheep</Copyright>
-    <Description>Mode and Mods enum for osu! libs.</Description>
+    <Description>Enums for osu! libs. Including Mode, Mods, Genre, Approved, Language and extensions.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DocumentationFile>bin\Release\Bleatingsheep.Osu.Enums.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
 </Project>

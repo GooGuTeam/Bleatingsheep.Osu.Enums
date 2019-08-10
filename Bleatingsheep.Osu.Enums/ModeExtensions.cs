@@ -10,10 +10,10 @@ namespace Bleatingsheep.Osu
     /// </summary>
     public static class ModeExtensions
     {
-        private const string ModeInfo = @"0,std,osu,osu!,standard,osu!standard,戳泡泡
-1,taiko,osu!taiko,太鼓
-2,ctb,catch,osu!catch,接水果
-3,mania,osu!mania";
+        private const string ModeInfo = @"0,std,osu,osu!,standard,osu!standard,戳泡泡,o
+1,taiko,osu!taiko,太鼓,t,o!t
+2,ctb,catch,osu!catch,接水果,c,o!c
+3,mania,osu!mania,m,o!m";
 
         private static readonly IReadOnlyDictionary<string, Mode> pairs;
 

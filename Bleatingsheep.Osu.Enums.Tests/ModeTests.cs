@@ -20,6 +20,21 @@ namespace Bleatingsheep.Osu.Enums.Tests
             Assert.Equal(Mode.Catch, result);
         }
 
+        [Theory]
+        [InlineData("o", Mode.Standard)]
+        [InlineData("t", Mode.Taiko)]
+        [InlineData("c", Mode.Catch)]
+        [InlineData("m", Mode.Mania)]
+        [InlineData("o!t", Mode.Taiko)]
+        [InlineData("o!c", Mode.Catch)]
+        [InlineData("o!m", Mode.Mania)]
+        public void Parse(string modeString, Mode expected)
+        {
+            var mode = ModeExtensions.Parse(modeString);
+
+            Assert.Equal(expected, mode);
+        }
+
         [Fact]
         public void ShortString()
         {
