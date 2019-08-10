@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45;netcoreapp1.0;netstandard1.0</TargetFrameworks>
     <RootNamespace>Bleatingsheep.Osu</RootNamespace>
-    <Version>0.6.0-beta2</Version>
+    <Version>0.6.0</Version>
     <Authors>bleatingsheep</Authors>
     <PackageTags>osu</PackageTags>
     <PackageProjectUrl>https://github.com/bltsheep/Bleatingsheep.Osu.Enums</PackageProjectUrl>
