@@ -13,7 +13,12 @@ namespace Bleatingsheep.Osu
         private const string ModeInfo = @"0,std,osu,osu!,standard,osu!standard,戳泡泡,o
 1,taiko,osu!taiko,太鼓,t,o!t
 2,ctb,catch,osu!catch,接水果,c,o!c
-3,mania,osu!mania,m,o!m";
+3,mania,osu!mania,m,o!m
+4,osurx,relax,rx,orx
+5,osuap,autopilot,ap,oap
+6,taikorx,trx
+7,ctbrx,crx,catchrx
+";
 
         private static readonly IReadOnlyDictionary<string, Mode> pairs;
 
@@ -35,6 +40,7 @@ namespace Bleatingsheep.Osu
             {
                 aliases.Add(singleLine);
             }
+
             for (int i = 0; i < aliases.Count; i++)
             {
                 ConcatLine(aliases[i], (Mode)i, ref maps);
@@ -73,6 +79,14 @@ namespace Bleatingsheep.Osu
                     return "catch";
                 case Mode.Mania:
                     return "mania";
+                case Mode.Osurx:
+                    return "osu!relax";
+                case Mode.Osuap:
+                    return "osu!autopilot";
+                case Mode.Taikorx:
+                    return "taiko relax";
+                case Mode.Catcherx:
+                    return "catch relax";
                 default:
                     return null;
             }
